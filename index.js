@@ -17,7 +17,7 @@ module.exports = {
     this.options = getOptions(app, app.options['defeatureify']);
   },
   contentFor: function(type, config) {
-    if(this.app.env !== 'production' && type === 'app-prefix') {
+    if(type === 'app-prefix') {
       return insertContent(this.options);
     }
     return '';
